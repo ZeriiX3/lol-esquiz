@@ -1,0 +1,416 @@
+/* Projet HTML : LoL EsQuiz
+Professeur: Maha NACEUR
+Mai - Juin / 2024
+
+Par Sébastien XU et Maxence DURAND */
+
+
+/* CSS pour le header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.header nav a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.header img {
+    width: 200px;
+    height: 100px;
+}
+
+.home-page {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/home-background.jpg');
+    padding: 20px;
+    background-attachment: fixed;
+    padding-top: 130px;
+    
+}
+
+/* CCS pour la page principale */
+.main-content {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(245, 245, 220, 0.9);;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.presentation {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.players, .regions {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.player, .region {
+    width: 200px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cornsilk;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+    margin: 10px; 
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.player:hover, .region:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.player img, .region img {
+    width: 100%; 
+    height: auto; 
+    max-height: 150px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* CSS pour la page du quiz*/
+.quiz-page {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/lolquiz.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    background-attachment: fixed;
+    background-color: black;
+    padding-top: 140px;
+}
+
+.quiz-container {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 80px auto;
+}
+
+
+   
+#difficulty-buttons {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#difficulty-buttons button {
+    text-align: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#difficulty-buttons button.facile {
+    background-color: #5cb85c; 
+    color: white;
+}
+
+#difficulty-buttons button.moyen {
+    background-color: #f0ad4e; 
+    color: white;
+}
+
+#difficulty-buttons button.difficile {
+    background-color: #d9534f;
+    color: white;
+}
+
+#difficulty-buttons button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+iframe#gif {
+    display: block;
+    margin: 0 auto;
+}
+
+body.quiz-page .quiz-container {
+    background-color: rgba(245, 245, 220, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-container h1 {
+    text-align: center;
+}
+
+.quiz-container .question {
+    margin-bottom: 20px;
+}
+
+.quiz-container .question h2 {
+    font-size: 18px;
+}
+
+.quiz-container .question ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quiz-container .question li {
+    margin-bottom: 10px;
+}
+
+.quiz-container .question input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz-container .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #2f87e4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quiz-container .submit-btn:hover {
+    background-color: #0056b3;
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.quiz-container .result {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.question {
+    display: none; 
+    margin-bottom: 15px;
+}
+
+
+/* CSS pour la page Compétitions */
+.tournament_main {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/riot-esport-background.png');
+    background-position: center;
+    padding: 20px;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 130px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    box-shadow: 0 0 10px black;
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.tournament-list {
+    width: 100%; 
+}
+
+.tournament-list h1 {
+    text-align: center;
+    color: black;
+}
+
+.tournament {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    width: 100%; 
+}
+
+.tournament:last-child {
+    border-bottom: none;
+}
+
+.tournament-title {
+    cursor: pointer;
+    color: gray; 
+    margin-bottom: 0.5rem;
+    text-align: left; 
+    width: 100%;
+    padding: 0 1rem; 
+}
+
+.tournament-info {
+    display: none; 
+    padding: 0 1rem; 
+}
+
+.tournament-info p {
+    color: dimgray; 
+    margin: 0.5rem 0;
+}
+
+.tournament-info a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: dodgerblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tournament-info a:hover {
+    text-decoration: underline;
+}
+
+/* Pour ajuster l'image dans Information générale */
+.deft {
+    max-width: 100%;
+    height: auto;
+}
+
+/* à propos */
+.container-p {
+    background-color: cyan;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.page-title {
+    font-size: 2em;
+    text-align: center;
+}
+
+.about-text {
+    margin-bottom: 15px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: lightseagreen;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    color: yellowgreen;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.commentaire {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: blueviolet;
+}
+
+button[type="submit"] {
+    width: auto;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    width: 98%;
+}
+
+.footer p {
+    color: white;
+}
+
+.footer a {
+    color: aqua;
+}
