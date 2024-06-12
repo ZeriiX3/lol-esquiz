@@ -1,0 +1,170 @@
+<!-- Projet HTML : LoL EsQuiz
+Professeur: Maha NACEUR
+Mai - Juin / 2024
+
+Par Sébastien XU et Maxence DURAND -->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LoL EsQuiz - Accueil</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body class="home-page">
+        
+        <header class="header">
+            <a href="https://lolesports.com/" target="_blank">
+                <img src="../img/lol-esport.jpg" alt="lol-esport_img">
+            </a>
+            <nav>
+                <a href="./home.html">Accueil</a>
+                <a href="./Quiz.html">Quiz</a>
+                <a href="Tournoi.html">Compétitions</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="presentation">
+                <h1>Bienvenue sur LoL EsQuiz</h1>
+                <p>Découvrez l'univers compétitif de League of Legends, le jeu qui a révolutionné le monde de l'esport. Que vous soyez un vétéran de la Faille de l'Invocateur ou un nouveau venu, 
+                    notre site vous offre une plongée dans le monde fascinant des compétitions de LoL.</p>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/j5QahFFHv0I?si=-H7Lr78qFnp8a_O5" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    
+                <p>Sélectionnez une région pour voir la liste des meilleurs joueurs.</p>
+            </section>
+
+            <div class="regions">
+                <div class="region" onclick="showPlayers('lck')">
+                    <img src="../img/lck.png" alt="LCK">
+                </div>
+                <div class="region" onclick="showPlayers('lec')">
+                    <img src="../img/lec.png" alt="LEC">
+                </div>
+                <div class="region" onclick="showPlayers('lpl')">
+                    <img src="../img/lpl.png" alt="LPL" >
+                </div>
+                <div class="region" onclick="showPlayers('lcs')">
+                    <img src="../img/lcs.png" alt="LCS">
+                </div>
+            </div>
+            
+            <div id="lck" class="players hidden">
+                <h2>Meilleurs joueurs LCK</h2>
+                <div class="player">
+                    <a href="https://fr.wikipedia.org/wiki/Faker" target="_blank">
+                        <img src="../img/faker.avif" alt="Faker">
+                    </a>
+                    <h3>Faker</h3>
+                    <p>Lee Sang-hyeok, connu sous le pseudonyme "Faker", est souvent considéré comme le meilleur joueur de League of Legends de tous les temps. Il a remporté de nombreux titres et est une icône de l'esport.</p>
+                </div>
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Ruler" target="_blank">
+                        <img src="../img/ruler.jpg" alt="Ruler">
+                    </a>
+                    <h3>Ruler</h3>
+                    <p>Park "Ruler" Jae-hyuk est un joueur coréen de League of Legends, reconnu pour ses compétences exceptionnelles en tant qu'ADC. Il a été un acteur clé dans les victoires internationales de son équipe et continue d'être un talent de premier plan sur la scène mondiale.</p>
+                </div>
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Chovy" target="_blank">
+                        <img src="../img/chovy.jpg" alt="Chovy">
+                    </a>
+                    <h3>Chovy</h3>
+                    <p>Jeong "Chovy" Ji-hoon est un talentueux mid laner coréen connu pour ses mécaniques exceptionnelles et son intelligence de jeu. Il a rapidement gravi les échelons pour devenir l'un des meilleurs mid laners de la LCK.</p>
+                </div>
+            </div>
+
+            <div id="lec" class="players hidden">
+                <h2>Meilleurs joueurs LEC</h2>
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Caps" target="_blank">
+                        <img src="../img/caps.jpg" alt="Caps">
+                    </a>
+                    <h3>Caps</h3>
+                    <p>Rasmus "Caps" Winther est un joueur européen de League of Legends, connu pour son incroyable flexibilité et son talent en tant que mid laner. Il a joué pour certaines des équipes les plus prestigieuses et a marqué la scène européenne de son empreinte.</p>
+                </div>
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Rekkles" target="_blank">
+                        <img src="../img/rekkles.webp" alt="Rekkles">
+                    </a>
+                    <h3>Rekkles</h3>
+                    <p>Carl Martin Erik "Rekkles" Larsson est un joueur suédois de League of Legends, connu pour son rôle d'ADC et ses nombreuses victoires avec Fnatic. Il est une figure emblématique de la scène européenne.</p>
+                </div>
+                
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Perkz" target="_blank">
+                        <img src="../img/perkz.jpg" alt="Perkz">
+                    </a>
+                    <h3>Perkz</h3>
+                    <p>Luka "Perkz" Perković est un joueur croate de League of Legends, connu pour sa flexibilité à jouer en mid lane et en ADC. Il a remporté de nombreux titres en Europe et est reconnu pour son leadership et son talent exceptionnel.</p>
+                </div>
+                
+            </div>
+
+            <div id="lpl" class="players hidden">
+                <h2>Meilleurs joueurs LPL</h2>
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Uzi_(Jian_Zi-Hao)" target="_blank">
+                        <img src="../img/uzi.jpg" alt="Uzi">
+                    </a>
+                    <h3>Uzi</h3>
+                    <p>Jian "Uzi" Zihao est un joueur chinois de LoL, célèbre pour son incroyable talent en ADC. Il a laissé une empreinte indélébile dans le monde de l'esport avec ses performances époustouflantes.</p>
+                </div>
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Doinb" target="_blank">
+                        <img src="../img/doinb.png" alt="Doinb">
+                    </a>
+                    <h3>Doinb</h3>
+                    <p>Kim "Doinb" Tae-sang est un mid laner coréen jouant en LPL, connu pour son style de jeu innovant et son leadership. Il a mené son équipe à plusieurs victoires internationales.</p>
+                </div>
+                
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/TheShy" target="_blank">
+                        <img src="../img/theshy.jpg" alt="TheShy">
+                    </a>
+                    <h3>TheShy</h3>
+                    <p>Kang "TheShy" Seung-lok est un top laner coréen jouant en LPL, célèbre pour son talent mécanique et son impact dans les parties. Il a contribué à la domination de son équipe sur la scène internationale.</p>
+                </div>
+            </div>
+
+            <div id="lcs" class="players hidden">
+                <h2>Meilleurs joueurs LCS</h2>
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Doublelift" target="_blank">
+                        <img src="../img/doublelift.jpg" alt="Doublelift">
+                    </a>
+                    <h3>Doublelift</h3>
+                    <p>Yiliang "Doublelift" Peng est un joueur légendaire de la région NA. Connu pour ses performances exceptionnelles en ADC, il a marqué l'histoire de la LCS avec ses victoires et sa longévité dans la scène compétitive.</p>
+                </div>
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/CoreJJ" target="_blank">
+                        <img src="../img/corejj.jpeg" alt="CoreJJ">
+                    </a>
+                    <h3>CoreJJ</h3>
+                    <p>Jo "CoreJJ" Yong-in est un support sud-coréen, champion du monde, ayant eu un impact significatif en LCS avec Team Liquid. Reconnu pour son leadership et ses compétences mécaniques, il est l'un des meilleurs supports de l'histoire de League of Legends.</p>
+                </div>
+                
+                
+                <div class="player">
+                    <a href="https://lol.fandom.com/wiki/Impact" target="_blank">
+                        <img src="../img/impact.jpg" alt="Impact">
+                    </a>
+                    <h3>Impact</h3>
+                    <p>Jung "Impact" Eon-yeong est un top laner coréen ayant trouvé du succès en LCS. Il est connu pour sa constance et sa capacité à rester au sommet de son jeu pendant de nombreuses années.</p>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <footer class="footer">
+        <p>&copy; 2024 LoL EsQuiz. Tous droits réservés. <a href="apropos.html" target="_blank">A propos...</a></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+        
+</html>

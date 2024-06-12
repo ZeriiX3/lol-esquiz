@@ -1,0 +1,80 @@
+<!-- Projet HTML : LoL EsQuiz
+Professeur: Maha NACEUR
+Mai - Juin / 2024
+
+Par Sébastien XU et Maxence DURAND -->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>LoL EsQuiz - A propos</title>
+    </head>
+
+    <body class="home-page">
+        <header class="header">
+            <a href="https://lolesports.com/" target="_blank">
+                <img src="../img/lol-esport.jpg" alt="lol-esport_img">
+            </a>
+            <nav>
+                <a href="./home.html">Accueil</a>
+                <a href="./Quiz.html">Quiz</a>
+                <a href="Tournoi.html">Compétitions</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container-p">
+                <h1 class="page-title">À Propos de LoL EsQuiz</h1>
+                <p class="about-text">Bienvenue sur notre site dédié à l'univers Esport du jeu League of Legends.</p>
+                <p class="about-text">Nous espérons que vous apprécierez naviguer sur notre site et que vous trouverez les informations que vous recherchez. N'hésitez pas à nous contacter si vous avez des questions ou des suggestions !</p>
+                
+                <form id="form-p">
+                    <fieldset>
+                        <legend>Veuillez vous identifier</legend>
+                        <ul>
+                            <li>
+                                <label for="nom">Nom :</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </li>
+                            <li>
+                                <label for="prenom">Prénom :</label>
+                                <input type="text" id="prenom" name="prenom" required>
+                            </li>
+                            <li>
+                                <label for="pseudo">Pseudo :</label>
+                                <input type="text" id="pseudo" name="pseudo" required>
+                            </li>
+                            <li>
+                                <label for="datenaissance">Date de naissance :</label>
+                                <input type="date" id="datenaissance" name="datenaissance" required>
+                            </li>
+                            <li>
+                                <label for="mail">Adresse e-mail :</label>
+                                <input type="email" id="mail" name="mail" required>
+                            </li>
+                            <li class="commentaire">
+                                <label for="commentaire">Votre commentaire :</label>
+                                <textarea id="commentaire" name="commentaire" rows="6" required></textarea>
+                            </li>
+                        </ul>
+                        
+                        <button type="submit" onclick="success()">Envoyer</button>
+                    </fieldset>
+                </form>
+                <p class="about-text">Créé par <strong>Sébastien XU et Maxence DURAND</strong></p>
+            </div>
+            
+        </main>   
+        
+    </body>
+
+    <footer class="footer">
+        <p>&copy; 2024 LoL EsQuiz. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</html>

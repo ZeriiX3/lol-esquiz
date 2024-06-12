@@ -1,0 +1,196 @@
+<!-- Projet HTML : LoL EsQuiz
+Professeur: Maha NACEUR
+Mai - Juin / 2024
+
+Par Sébastien XU et Maxence DURAND -->
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>LoL EsQuiz - Quiz</title>
+    </head>
+
+    <body class="quiz-page">
+
+        <header class="header">
+            <a href="https://lolesports.com/" target="_blank">
+                <img src="../img/lol-esport.jpg" alt="lol-esport_img" >
+            </a>
+            <nav>
+                <a href="./home.html">Accueil</a>
+                <a href="./Quiz.html">Quiz</a>
+                <a href="Tournoi.html">Compétitions</a>
+            </nav>
+        </header>
+
+        <div class="quiz-container">
+            
+            <h1>Quiz League of Legends</h1>
+            <iframe id="gif" src="https://giphy.com/embed/KyIaRm6jYlAGyJ86zH" width="480" height="271" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+            <div id="difficulty-buttons">
+                <button class="facile" onclick="setDifficulty('facile')">Facile</button>
+                <button class="moyen" onclick="setDifficulty('moyen')">Moyen</button>
+                <button class="difficile" onclick="setDifficulty('difficile')">Difficile</button>
+            </div>
+            
+        
+
+            <form id="quiz-form">
+                <div class="question" id="facile">
+                    <h2>Question 1: Quel joueur est connu sous le pseudo "Faker" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q1" value="Lee Sang-hyeok"> Lee Sang-hyeok</label></li>
+                        <li><label><input type="radio" name="q1" value="Jian Zihao"> Jian Zihao</label></li>
+                        <li><label><input type="radio" name="q1" value="Kang Seung-ho"> Kang Seung-ho</label></li>
+                        <li><label><input type="radio" name="q1" value="Kim Tae-sang"> Kim Tae-sang</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="facile">
+                    <h2>Question 2: Quel est le rôle principal de "Doublelift" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q2" value="Top"> Top</label></li>
+                        <li><label><input type="radio" name="q2" value="Jungle"> Jungle</label></li>
+                        <li><label><input type="radio" name="q2" value="Mid"> Mid</label></li>
+                        <li><label><input type="radio" name="q2" value="ADC"> ADC</label></li>
+                        <li><label><input type="radio" name="q2" value="Support"> Support</label></li>
+                    </ul>
+                </div>
+                
+                <div class="question" id="moyen">
+                    <h2>Question 1: Quel joueur est connu sous le pseudo "Perkz" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q3" value="Luka Perković"> Luka Perković</label></li>
+                        <li><label><input type="radio" name="q3" value="Rasmus Winther"> Rasmus Winther</label></li>
+                        <li><label><input type="radio" name="q3" value="Søren Bjerg"> Søren Bjerg</label></li>
+                        <li><label><input type="radio" name="q3" value="Marcin Jankowski"> Marcin Jankowski</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="difficile">
+                    <h2>Question 1: Quel joueur est connu sous le pseudo "Uzi" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q4" value="Jian Zihao"> Jian Zihao</label></li>
+                        <li><label><input type="radio" name="q4" value="Kim Dong-ha"> Kim Dong-ha</label></li>
+                        <li><label><input type="radio" name="q4" value="Gao Tianliang"> Gao Tianliang</label></li>
+                        <li><label><input type="radio" name="q4" value="Yu Wenbo"> Yu Wenbo</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="moyen">
+                    <h2>Question 2: Quel joueur est connu sous le pseudo "Caps" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q5" value="Rasmus Winther"> Rasmus Winther</label></li>
+                        <li><label><input type="radio" name="q5" value="Luka Perković"> Luka Perković</label></li>
+                        <li><label><input type="radio" name="q5" value="Søren Bjerg"> Søren Bjerg</label></li>
+                        <li><label><input type="radio" name="q5" value="Marcin Jankowski"> Marcin Jankowski</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="facile">
+                    <h2>Question 3: Quel est le rôle principal de "Doinb" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q6" value="Top"> Top</label></li>
+                        <li><label><input type="radio" name="q6" value="Jungle"> Jungle</label></li>
+                        <li><label><input type="radio" name="q6" value="Mid">Mid</label></li>
+                        <li><label><input type="radio" name="q6" value="ADC"> ADC</label></li>
+                        <li><label><input type="radio" name="q6" value="Support"> Support</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="moyen">
+                    <h2>Question 3: Quel joueur est connu sous le pseudo "Rekkles" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q7" value="Carl Martin Erik Larsson"> Carl Martin Erik Larsson</label></li>
+                        <li><label><input type="radio" name="q7" value="Peter Dun"> Peter Dun</label></li>
+                        <li><label><input type="radio" name="q7" value="Jian Zihao"> Jian Zihao</label></li>
+                        <li><label><input type="radio" name="q7" value="Yu Wenbo"> Yu Wenbo</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="facile">
+                    <h2>Question 4: Qui est le joueur ayant remporté le plus de titres du championnat du monde ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q8" value="Lee Sang-hyeok"> Lee "Faker" Sang-hyeok</label></li>
+                        <li><label><input type="radio" name="q8" value="Kang Chan-yong"> Kang "Ambition" Chan-yong</label></li>
+                        <li><label><input type="radio" name="q8" value="Jian Zihao"> Jian "Uzi" Zihao</label></li>
+                        <li><label><input type="radio" name="q8" value="Lee Seong-jin"> Lee "Faker" Seong-jin</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="moyen">
+                    <h2>Question 4: Qui est le joueur connu pour ses incroyables performances en tant que jungler sous le pseudo "Jankos" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q9" value="Marcin Jankowski"> Marcin Jankowski</label></li>
+                        <li><label><input type="radio" name="q9" value="Luka Perković"> Luka Perković</label></li>
+                        <li><label><input type="radio" name="q9" value="Rasmus Winther"> Rasmus Winther</label></li>
+                        <li><label><input type="radio" name="q9" value="Søren Bjerg"> Søren Bjerg</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="difficile">
+                    <h2>Question 2: Quel joueur est connu sous le pseudo "TheShy" et est célèbre pour ses performances en tant que top laner ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q10" value="Song Eui-jin"> Song Eui-jin</label></li>
+                        <li><label><input type="radio" name="q10" value="Yu Wenbo"> Yu Wenbo</label></li>
+                        <li><label><input type="radio" name="q10" value="Kang Chan-yong"> Kang Chan-yong</label></li>
+                        <li><label><input type="radio" name="q10" value="Kim Dong-ha"> Kim Dong-ha</label></li>
+                    </ul>
+                </div>
+                
+                <div class="question" id="difficile">
+                    <h2>Question 3: Quel joueur est surnommé "TheShy" et est reconnu pour sa maîtrise du champion Renekton ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q11" value="Song Eui-jin"> Song Eui-jin</label></li>
+                        <li><label><input type="radio" name="q11" value="Kim Dong-ha"> Kim Dong-ha</label></li>
+                        <li><label><input type="radio" name="q11" value="Yu Wenbo"> Yu Wenbo</label></li>
+                        <li><label><input type="radio" name="q11" value="Kang Chan-yong"> Kang Chan-yong</label></li>
+                    </ul>
+                </div>
+                
+                <div class="question" id="difficile">
+                    <h2>Question 4: Quel joueur est connu pour ses performances en tant que mid laner sous le pseudo "Knight" ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q12" value="Zhuo Ding"> Zhuo Ding</label></li>
+                        <li><label><input type="radio" name="q12" value="Wang Jiahao"> Wang Jiahao</label></li>
+                        <li><label><input type="radio" name="q12" value="Yu Wenbo"> Yu Wenbo</label></li>
+                        <li><label><input type="radio" name="q12" value="Zhang Zhi-Wei"> Zhang Zhi-Wei</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="facile">
+                    <h2>Question 5: Quel est le nom du plus grand tournoi européen de LoL ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q13" value="LCK"> LCK</label></li>
+                        <li><label><input type="radio" name="q13" value="LEC"> LEC</label></li>
+                        <li><label><input type="radio" name="q13" value="LPL"> LPL</label></li>
+                        <li><label><input type="radio" name="q13" value="LCS"> LCS</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="difficile">
+                    <h2>Question 5: Quelle est la partie compétitive de LoL la plus courte ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q14" value="1"> 12 minutes et 32 secondes</label></li>
+                        <li><label><input type="radio" name="q14" value="2"> 13 minutes et 16 secondes</label></li>
+                        <li><label><input type="radio" name="q14" value="3"> 11 minutes et 48 secondes</label></li>
+                        <li><label><input type="radio" name="q14" value="4"> 10 minutes et 32 secondes</label></li>
+                    </ul>
+                </div>
+                <div class="question" id="moyen">
+                    <h2>Question 5: Quel est le plus grand nombre de victoires compétitives d'affilée ?</h2>
+                    <ul>
+                        <li><label><input type="radio" name="q15" value="20"> 20</label></li>
+                        <li><label><input type="radio" name="q15" value="28"> 28</label></li>
+                        <li><label><input type="radio" name="q15" value="31"> 31</label></li>
+                        <li><label><input type="radio" name="q15" value="26"> 26</label></li>
+                    </ul>
+                </div>
+                
+                
+                <button type="button" class="submit-btn" onclick="checkAnswers()">Soumettre</button>
+            </form>
+
+            <div id="result" class="result"></div>
+        </div>
+    </body>
+
+    <footer class="footer">
+        <p>&copy; 2024 LoL EsQuiz. Tous droits réservés. <a href="apropos.html" target="_blank">A propos...</a></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</html>
